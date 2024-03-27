@@ -1,0 +1,1 @@
+Full-Stack project(React , Node.js on Express, library's, Firebase storage) with full authorisation logic and OTP verification , full changeable user profile. Crypto api with every 15s real time prices updates , charts and a lot more futures
