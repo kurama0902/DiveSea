@@ -1,0 +1,164 @@
+.button {
+  transition: 0.3s;
+  text-align: center;
+  border-radius: 11px;
+  min-width: 120px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+  &.withSvg {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  &.small {
+    padding: 13px;
+    font-family: var(--font-Poppins);
+    font-size: 14.115px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 21.173px */
+    letter-spacing: 0.118px;
+  }
+  &.medium {
+    font-family: var(--font-Poppins);
+    padding: 17px 22px;
+    font-size: 16.271px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.163px;
+    text-transform: uppercase;
+  }
+  &.large {
+    padding: 19px 25px;
+    font-family: var(--font-Outfit);
+    font-size: 21.357px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.214px;
+  }
+  &.primary {
+    background-color: #000;
+    color: #fff;
+    border: 1.5px solid #000;
+    &:hover {
+      color: #000;
+      background-color: transparent;
+      svg path {
+        stroke: #000;
+      }
+    }
+  }
+  &.secondary {
+    background-color: var(--background-white);
+    color: #000;
+    &:hover {
+      color: #fff;
+      background-color: #000;
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+  &.outlined {
+    background-color: transparent;
+    border: 1.7px solid #000;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+      svg path {
+        fill: #fff;
+      }
+    }
+  }
+  &.outlinedWhite {
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: transparent;
+    &:hover {
+      background-color: #fff;
+      color: var(--text-grayblack);
+    }
+  }
+  &.containedWhite {
+    background-color: #fff;
+    color: var(--text-grayblack);
+    border: 2px solid #fff;
+    &:hover {
+      background-color: transparent;
+      color: #fff;
+    }
+  }
+  &.focus {
+    color: #fff;
+    background-color: #000;
+  }
+  &.focusStroke {
+    color: #fff;
+    background-color: #000;
+    svg path{
+      fill:transparent;
+      stroke:#fff;
+    }
+  }
+  &.focus svg path {
+    fill: var(--color-white);
+  }
+  svg {
+    pointer-events: none;
+  }
+}
+@media (max-width: 1280px) {
+  .button {
+    border-radius: 9.432px;
+    min-width: 86px;
+    &.withSvg {
+      gap: 7px;
+    }
+    &.small {
+      padding: 7px;
+      font-family: var(--font-Poppins);
+      font-size: 10.038px;
+      line-height: 150%;
+      letter-spacing: 0.084px;
+    }
+    &.medium {
+      padding: 12px 20px;
+      font-size: 11.571px;
+      line-height: normal;
+      letter-spacing: 0.116px;
+    }
+    &.large {
+      padding: 14px 18px;
+      font-size: 15.204px;
+      line-height: 130%;
+      letter-spacing: 0.152px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .button {
+    &.withSvg {
+      gap: 7px;
+    }
+    &.small {
+      font-size: 9.918px;
+      line-height: 150%;
+      letter-spacing: 0.142px;
+    }
+    &.medium {
+      padding: 12px 20px;
+      font-size: 11.571px;
+      line-height: normal;
+      letter-spacing: 0.116px;
+    }
+    &.large {
+      padding: 9px 12px;
+      font-size: 10.583px;
+      line-height: 130%;
+      letter-spacing: 0.106px;
+    }
+  }
+}

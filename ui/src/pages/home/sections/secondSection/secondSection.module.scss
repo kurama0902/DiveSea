@@ -1,0 +1,48 @@
+.weakly_top {
+  background-color: #f1f1f1;
+  padding-block: 70px 90px;
+  position: relative;
+  .big_card {
+    overflow: auto;
+    flex-grow: 1;
+    div {
+      display: flex;
+      overflow: auto;
+    }
+  }
+  .main_text {
+    color: var(--text-lightgray);
+    width: 100%;
+    text-align: center;
+    font-family: var(--font-Poppins);
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26.916px;
+  }
+  .nft_wrap {
+    overflow: auto;
+    padding-block: 100px 114px;
+    display: flex;
+    gap: 40px;
+  }
+  .nft_wrap::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (max-width: 1080px) {
+  .weakly_top {
+    .main_text {
+      font-size: 32.003px;
+      line-height: 19.142px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .weakly_top {
+    .main_text {
+      font-size: 30px;
+      line-height: 26.916px;
+    }
+  }
+}

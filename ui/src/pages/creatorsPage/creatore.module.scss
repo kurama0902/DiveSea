@@ -1,0 +1,182 @@
+.creators_container {
+  padding-inline: 100px;
+  height: 60vh;
+  .main_text {
+    color: #18181b;
+    font-family: var(--font-Poppins);
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 54.4px;
+    text-transform: capitalize;
+    margin-bottom: 45px;
+    text-align: center;
+  }
+  .table_wrap {
+    overflow: auto;
+    border-radius: 15px;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    table {
+      background-color: var(--color-neutrals8);
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 38.817px 11.763px 58.813px 0px rgba(199, 199, 199, 0.6);
+      width: 100%;
+      min-width: 700px;
+      thead {
+        tr {
+          th {
+            text-align: center;
+            padding: 10px;
+            padding-inline: unset;
+            color: #93989a;
+            font-family: var(--font-Poppins);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+            letter-spacing: 0.22px;
+            .th_with_svg,
+            .th_with_svg_active {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              gap: 2px;
+              cursor: pointer;
+              svg {
+                width: 13px;
+                height: 13px;
+                path {
+                  fill: #93989a;
+                }
+              }
+            }
+            .th_with_svg_active {
+              color: #000;
+              svg path {
+                fill: #000;
+              }
+              .hide {
+                display: none;
+              }
+              .fil {
+                rotate: 90deg;
+              }
+            }
+            &:first-child {
+              width: 10px;
+              padding-right: 20px;
+              span {
+                pointer-events: none;
+              }
+            }
+            .collection {
+              width: 150px;
+              width: 100%;
+              span {
+                pointer-events: none;
+              }
+            }
+            &:not(:last-child) {
+              text-align: left;
+              .th_with_svg {
+                justify-content: flex-end;
+              }
+            }
+          }
+        }
+      }
+      tbody {
+        .creators_fields {
+          td {
+            text-align: right;
+            padding-bottom: 10px;
+            span {
+              color: var(--text-grayblack);
+              font-family: var(--font-Poppins);
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 130%;
+              letter-spacing: 0.245px;
+            }
+            &:first-child {
+              text-align: left;
+            }
+          }
+          .creator_name {
+            text-align: left;
+            cursor: pointer;
+            z-index: 2;
+            position: relative;
+            span {
+              display: flex;
+              align-items: center;
+              gap: 4px;
+            }
+            svg {
+              pointer-events: none;
+            }
+            &:hover {
+              span {
+                color: #007aff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .creators_container {
+    padding-inline: 40px;
+    .table_wrap {
+      table {
+        thead {
+        }
+        tbody {
+          .creators_fields {
+            td {
+              span {
+                font-size: 13px;
+              }
+              &:first-child {
+                position: sticky;
+                left: 0;
+                background-color: var(--color-neutrals8);
+              }
+            }
+            .creator_name {
+              position: sticky;
+              left: 14px;
+              background-color: var(--color-neutrals8);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .creators_container {
+    padding-inline: 0px;
+    .table_wrap {
+      table {
+        thead {
+        }
+        tbody {
+          .creators_fields {
+            td {
+              span {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
